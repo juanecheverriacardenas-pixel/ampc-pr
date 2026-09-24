@@ -110,12 +110,12 @@ footer{text-align:center;padding:30px;color:var(--mut);font-size:14px}
 <section id="contacto">
 <h2>Contacto</h2>
 <div class="grid">
-<div class="card"><h3>Correo</h3><p>AMPC-PR@gmail.com</p></div>
+<div class="card"><h3>Correo</h3><p>ampc.pr.prct@gmail.com</p></div>
 <div class="card"><h3>WhatsApp</h3><p><a href="https://wa.me/573197767258" style="color:var(--ac)">+57 319 776 7258</a></p></div>
 <div class="card"><h3>Redes</h3><p>Instagram · LinkedIn · Facebook @ampcpr</p></div>
 </div>
-<div class="card" style="margin-top:16px"><input placeholder="Nombre"><input type="email" placeholder="Correo"><textarea rows="4" placeholder="Mensaje"></textarea>
-<button class="btn p" onclick="this.textContent='¡Mensaje enviado!'">Enviar</button></div>
+<div class="card" style="margin-top:16px"><input id="cn" placeholder="Nombre"><input id="ce" type="email" placeholder="Correo"><textarea id="cm" rows="4" placeholder="Mensaje"></textarea>
+<button class="btn p" onclick="enviar(this)">Enviar</button><div id="cs" class="mut" style="margin-top:8px"></div></div>
 </section>
 <footer>© 2026 AMPC-PR · Hecho con material reciclado</footer>
 
@@ -136,6 +136,13 @@ var f=document.getElementById('flow'),info=document.getElementById('stepInfo');
 S.forEach(function(s,i){var d=document.createElement('div');d.className='step';d.textContent=s[0];d.onclick=function(){sel(i)};f.appendChild(d)});
 function sel(i){[].forEach.call(f.children,function(c,j){c.classList.toggle('on',i===j)});info.textContent=S[i][1]}
 sel(0);
+function enviar(b){
+var nm=document.getElementById('cn').value.trim(),em=document.getElementById('ce').value.trim(),ms=document.getElementById('cm').value.trim(),st=document.getElementById('cs');
+if(!nm||!em||!ms){st.textContent='Completa nombre, correo y mensaje.';return}
+b.disabled=true;st.textContent='Enviando...';
+fetch('https://formsubmit.co/ajax/ampc.pr.prct@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:nm,email:em,message:ms,_subject:'Nuevo mensaje desde la página AMPC-PR'})})
+.then(function(r){return r.json()}).then(function(){st.textContent='¡Mensaje enviado! Te responderemos pronto.';b.disabled=false;['cn','ce','cm'].forEach(function(i){document.getElementById(i).value=''})})
+.catch(function(){st.textContent='No se pudo enviar. Escríbenos por WhatsApp.';b.disabled=false})}
 </script>
 </body>
 </html>
