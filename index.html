@@ -103,7 +103,7 @@ footer{text-align:center;padding:30px;color:var(--mut);font-size:14px}
 <input id="nom" placeholder="Nombre completo"><input id="em" type="email" placeholder="Correo">
 <button class="btn p" onclick="pagar()">Pagar</button>
 <div id="ok"></div>
-<p class="mut" style="font-size:13px">Pago de demostración. Para cobrar de verdad, conecta tu pasarela (Wompi, PayU o Mercado Pago) en la función <code>pagar()</code>.</p>
+<p class="mut" style="font-size:13px">Pago seguro con Wompi. Se abre en una pestaña nueva.</p>
 </div>
 </section>
 
@@ -127,9 +127,9 @@ function render(){document.getElementById('qn').textContent=n;document.getElemen
 function pagar(){
 var nom=document.getElementById('nom').value.trim(),em=document.getElementById('em').value.trim();
 if(!nom||!em){alert('Completa nombre y correo');return}
-/* Aquí va la integración real de la pasarela (Wompi/PayU/Mercado Pago). */
-var o=document.getElementById('ok');o.style.display='block';
-o.textContent='Pedido de '+n+' bolsa(s) de '+document.getElementById('med').value+' registrado. Total '+fmt(n*PRECIO)+'.'}
+
+var o=document.getElementById('ok');o.style.display='block';o.textContent='Abriendo el pago seguro de Wompi por '+fmt(n*PRECIO)+'...';
+window.open('https://checkout.wompi.co/l/VPOS_jxXPI5','_blank','noopener')}
 render();
 var S=[['♻ Material reciclado','Recolectamos plástico posconsumo aprovechable.'],['⚙ Transformación','Se clasifica, limpia, tritura y funde.'],['🏭 Fabricación','Se moldea con las medidas técnicas y se controla la calidad.'],['📦 Distanciador','Producto terminado, empacado en bolsas de 100.'],['🏗 Uso en construcción','Garantiza el recubrimiento del acero en la obra.']];
 var f=document.getElementById('flow'),info=document.getElementById('stepInfo');
