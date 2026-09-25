@@ -44,7 +44,7 @@ details{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:14
 footer{background:var(--c);color:#c9d2cc;padding:48px 0 24px}footer a{color:#c9d2cc;text-decoration:none;display:block;padding:3px 0}footer a:hover{color:var(--ac)}footer h4{color:#fff;margin:0 0 8px}
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .5s,transform .5s}.js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-.fam{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.fam button{padding:10px 18px;border-radius:99px;border:2px solid var(--bd);background:#fff;font:600 14px inherit;cursor:pointer;color:var(--c);transition:.2s}.fam button:hover{border-color:var(--ac)}.fam button.on{background:var(--g);border-color:var(--g);color:#fff}.ph img+img{margin-top:12px}
+.fam{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.fam button{padding:10px 18px;border-radius:99px;border:2px solid var(--bd);background:#fff;font:600 14px inherit;cursor:pointer;color:var(--c);transition:.2s}.fam button:hover{border-color:var(--ac)}.fam button[disabled]{opacity:.5;cursor:default;font-style:italic}.fam button[disabled]:hover{border-color:var(--bd)}.fam button.on{background:var(--g);border-color:var(--g);color:#fff}.ph img+img{margin-top:12px}
 </style>
 </head>
 <body>
@@ -56,7 +56,7 @@ footer{background:var(--c);color:#c9d2cc;padding:48px 0 24px}footer a{color:#c9d
 <h1>Lo que era residuo, hoy sostiene tu obra.</h1>
 <p class="lead" style="color:#d6e6dc">AMPC-PR transforma plástico reciclado en distanciadores funcionales para construcción.</p>
 <a class="btn" href="#producto">Conoce nuestro producto</a><a class="btn o" href="#compra">Comprar / Cotizar</a>
-<div class="chips"><span>4 líneas de producto</span><span>17 referencias</span><span>Plástico reciclado</span></div></div>
+<div class="chips"><span>6 referencias</span><span>Entrepisos y losas</span><span>Plástico reciclado</span></div></div>
 <div class="ph"><img data-i="p1" alt="Distanciador tipo canastilla de plástico reciclado"></div></div></section>
 
 <section id="problema" class="s"><div class="w"><div class="k">El problema</div><h2>Un residuo sin segundo uso y una obra que lo necesita todo</h2>
@@ -73,8 +73,8 @@ footer{background:var(--c);color:#c9d2cc;padding:48px 0 24px}footer a{color:#c9d
 <div class="g">
 <div class="cd rv"><h3>Funcionalidad</h3><p>Mantiene la separación entre el acero y la formaleta para asegurar el recubrimiento.</p></div>
 <div class="cd rv"><h3>Material reciclado</h3><p>Plástico reciclado como materia prima de cada distanciador.</p></div>
-<div class="cd rv"><h3>Alternativa para construir</h3><p>Una opción más sostenible para tu obra.</p></div>
-<div class="cd rv"><h3>Pensado para la obra</h3><p>Cuatro líneas y 17 referencias para entrepisos, losas, muros, columnas y cimentación.</p></div></div></div></section>
+<div class="cd rv"><h3>Alternativa para construir</h3><p>Una opción más sostenible para entrepisos y losas.</p></div>
+<div class="cd rv"><h3>Pensado para la obra</h3><p>Seis referencias según el recubrimiento que necesite tu proyecto.</p></div></div></div></section>
 
 <section id="producto" class="s alt"><div class="w"><div class="k">Nuestro producto</div><h2>Nuestros distanciadores</h2>
 <p class="mut lead">Elige una línea y luego una referencia para ver su ficha.</p>
@@ -118,8 +118,8 @@ footer{background:var(--c);color:#c9d2cc;padding:48px 0 24px}footer a{color:#c9d
 <section id="faq" class="s"><div class="w" style="max-width:760px"><div class="k">Preguntas frecuentes</div><h2>Resolvemos tus dudas</h2>
 <details><summary>¿Qué es un distanciador?</summary><p>Es una pieza que mantiene la separación entre el acero de refuerzo y la formaleta, asegurando el recubrimiento del concreto.</p></details>
 <details><summary>¿De qué material están fabricados?</summary><p>De plástico reciclado.</p></details>
-<details><summary>¿Qué referencias manejan?</summary><p>Cuatro líneas: canastilla plástica (CP 25 a CP 90), canastilla de cimentación (CPC 25), doble malla (DM 10 a DM 25) y rueda plástica (RP 08 a RP 15).</p></details>
-<details><summary>¿Para qué tipo de obra se pueden utilizar?</summary><p>Según la línea: entrepisos y losas, cimentación y zapatas, muros, columnas y vigas. Cada ficha indica su aplicación.</p></details>
+<details><summary>¿Qué referencias manejan?</summary><p>Por ahora, canastilla plástica: CP 25 a CP 90. Próximamente sumaremos más líneas.</p></details>
+<details><summary>¿Para qué tipo de obra se pueden utilizar?</summary><p>Entrepisos y losas.</p></details>
 <details><summary>¿Puedo comprar al por mayor?</summary><p>Se venden por empaques (entre 400 y 2000 unidades según la referencia). Para otras cantidades, escríbenos.</p></details>
 <details><summary>¿Cómo puedo solicitar una cotización?</summary><p>Elige referencia y cantidad en la sección Compra y pulsa "Solicitar cotización", o escríbenos por WhatsApp o correo.</p></details></div></section>
 
@@ -149,15 +149,15 @@ var D=[];F.forEach(function(f,i){f.r.forEach(function(r){D.push(r.concat(i))})})
 var WA='573197767258',PAY='https://checkout.wompi.co/l/VPOS_jxXPI5',sel=0,n=1,fam=-1;
 function $(i){return document.getElementById(i)}
 document.querySelectorAll('img[data-i]').forEach(function(i){i.src=IMG[i.dataset.i]});
-$('med').innerHTML=F.map(function(f,i){return '<optgroup label="'+f.n+'">'+D.map(function(d,k){return d[5]===i?'<option value="'+k+'">'+d[0]+' · '+d[1]+' cm</option>':''}).join('')+'</optgroup>'}).join('');
+$('med').innerHTML='<optgroup label="'+F[0].n+'">'+D.map(function(d,k){return d[5]===0?'<option value="'+k+'">'+d[0]+' · '+d[1]+' cm</option>':''}).join('')+'</optgroup>';
 function row(l,rs,j){return '<tr><td>'+l+'</td>'+rs.map(function(d){return '<td>'+d[j]+'</td>'}).join('')+'</tr>'}
 function famSel(i){fam=i;var f=F[i],rs=f.r;
-$('fam').innerHTML=F.map(function(x,j){return '<button data-f="'+j+'" class="'+(j===i?'on':'')+'">'+x.n+'</button>'}).join('');
+$('fam').innerHTML=F.map(function(x,j){return j===0?'<button data-f="0" class="'+(i===0?'on':'')+'">'+x.n+'</button>':'<button disabled title="Próximamente">'+x.n+' · Próximamente</button>'}).join('');
 $('fd').textContent=f.d;
 $('fp').innerHTML=f.im.map(function(k){return '<img src="'+IMG[k]+'" alt="'+f.n+'">'}).join('');
 $('refs').innerHTML=D.map(function(d,k){return d[5]===i?'<button class="rc" data-k="'+k+'"><small>Referencia</small><b>'+d[0]+'</b><span>'+d[1]+' cm</span></button>':''}).join('');
 $('tb').innerHTML='<tr><th>Referencia</th>'+rs.map(function(d){return '<th>'+d[0]+'</th>'}).join('')+'</tr>'+row('Recubrimiento (cm)',rs,1)+row('Carga (kg/m²)',rs,4)+row('Unidades por empaque',rs,2)+row('Peso (kg)',rs,3)}
-function pick(k){sel=k;var d=D[k],f=F[d[5]];if(d[5]!==fam)famSel(d[5]);
+function pick(k){var d0=D[k];if(d0[5]!==0)return;sel=k;var d=D[k],f=F[d[5]];if(d[5]!==fam)famSel(d[5]);
 [].forEach.call($('refs').children,function(c){c.classList.toggle('on',+c.dataset.k===k)});
 $('fi').innerHTML='<h3>Ficha · '+d[0]+'</h3><table class="ft"><tr><td>Referencia</td><td>'+d[0]+'</td></tr><tr><td>Medida (recubrimiento)</td><td>'+d[1]+' cm</td></tr><tr><td>Uso</td><td>'+f.u+'</td></tr><tr><td>Material</td><td>Plástico reciclado</td></tr><tr><td>Carga</td><td>'+d[4]+' kg/m²</td></tr><tr><td>Presentación</td><td>Empaque de '+d[2]+' und ('+d[3]+' kg)</td></tr></table><a class="btn" href="#compra">Comprar / Cotizar</a>';
 $('med').value=k;sm()}
@@ -180,7 +180,7 @@ fetch('https://formsubmit.co/ajax/ampc.pr.prct@gmail.com',{method:'POST',headers
 .catch(function(){st.textContent='No se pudo enviar. Escríbenos por WhatsApp.';b.disabled=false})}
 $('bg').onclick=function(){$('mn').classList.toggle('open')};
 $('mn').onclick=function(e){if(e.target.tagName==='A')$('mn').classList.remove('open')};
-pick(0);
+famSel(0);pick(0);
 if('IntersectionObserver' in window){document.documentElement.classList.add('js');
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(function(e){e.style.transitionDelay=([].indexOf.call(e.parentNode.children,e)%6*70)+'ms';io.observe(e)})}
